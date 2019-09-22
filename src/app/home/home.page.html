@@ -1,14 +1,8 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  <div class="mitad" style="background-color: rgb(13, 243, 163);" (click)='mover("linda")'>
+      <ion-icon class="icono" style="float: left;" color='danger' slot="start" name="heart"></ion-icon>
+      <h2 class="text" style="float: right;color: black;">Cosas Lindas</h2>
   </div>
-</ion-content>
+  <div class="mitad" style="background-color: rgb(137, 6, 160);" (click)='mover("fea")'>
+      <h2 class="text" style="float: left; color: white;">Cosas Feas</h2>
+      <ion-icon class="icono" style="float: right;" color='danger' slot="end" name="heart-dislike"></ion-icon>
+  </div>

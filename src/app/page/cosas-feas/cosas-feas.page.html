@@ -1,0 +1,20 @@
+<div class="cosa">
+  <h1 class="text">
+    Cosas Feas
+  </h1>
+</div>
+
+<ion-slides class="slides">
+  <!-- Foto -->
+
+
+  <ion-slide class="slides" *ngFor="let dato of arrayCosasLindas">
+    <div class="container">
+        <img class="picture" src='{{dato.link}}' style="width:100%;"/>
+        <h1 class="usuario">{{dato.usuario}}</h1>
+        <h1 class="fecha">{{dato.fecha}}</h1>
+    </div>
+
+
+  </ion-slide>
+</ion-slides>
