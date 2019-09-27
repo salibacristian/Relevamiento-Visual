@@ -2,84 +2,73 @@
   <ion-card>
     <ion-card-header>
       <ion-card-title>
-        <img class="icon" src="./../../assets/icon/edificio1.png">
+        <img class="icon" src="./../../assets/icon/icon.png">
       </ion-card-title>
-      <ion-card-title class="container">
-        <div>
-          <h2 class='text'>Iniciar Sesión</h2>
-        </div>
+      <ion-card-title class="ion-text-center">
+        <h2 class='text'>Iniciar Sesión</h2>
       </ion-card-title>
-
-
     </ion-card-header>
-
     <ion-card-content>
-      <ion-item shape="round">
+      <ion-item >
         <ion-label position="floating">
           <ion-text>
             <h4>
-              Correo Electronico
+              Correo Electrónico
             </h4>
           </ion-text>
-
         </ion-label>
-        <ion-input clear-input type='text' [(ngModel)]='email'></ion-input>
+        <ion-input clear-input type='text' color="primary" [(ngModel)]='email'></ion-input>
       </ion-item>
-
-      <ion-item shape="round">
+      <ion-item >
         <ion-label position="floating">
           <ion-text>
             <h4>
               Contraseña
             </h4>
           </ion-text>
-
         </ion-label>
-        <ion-input clearInput type='password' [(ngModel)]='password'></ion-input>
+        <ion-input clearInput type='password' color="primary" [(ngModel)]='password'></ion-input>
       </ion-item>
-
       <ion-item>
         <ion-label>
-          <ion-button expand="full" (click)='OnSubmitLogIn()' shape="round" color='success' fill="outline">
-            <ion-icon slot="start" name="checkmark"></ion-icon>
-            Aceptar
+          <ion-button expand="block" (click)='OnSubmitLogIn()' color='primary' fill="outline">
+            Ingresar
           </ion-button>
         </ion-label>
-
       </ion-item>
       <ion-item>
         <ion-label>
-          <ion-button expand="full" (click)='Rellenar("admin",111111)'>
-            <ion-icon slot="start" name="person"></ion-icon>
+          <ion-button expand="full" shape="round" (click)='Rellenar("admin",1111)'>
+            <ion-icon slot="start"  name="person"></ion-icon>
             Administrador
           </ion-button>
         </ion-label>
       </ion-item>
       <ion-item>
         <ion-label>
-          <ion-button expand="full" (click)='Rellenar("tester",555555)'>
-            <ion-icon slot="start" name="person"></ion-icon>
-            Testeador
+          <ion-button expand="full" shape="round" (click)='Rellenar("invitado",2222)'>
+            <ion-icon slot="start"  name="person"></ion-icon>
+            Invitado
           </ion-button>
         </ion-label>
         <ion-label>
-          <ion-button expand="full" (click)='Rellenar("invitado",222222)'>
+          <ion-button expand="full" shape="round" (click)='Rellenar("usuario",3333)'>
             <ion-icon slot="start" name="person"></ion-icon>
-            Invitado
+            Usuario
           </ion-button>
         </ion-label>
       </ion-item>
       <ion-item>
         <ion-label>
-          <ion-button expand="full" (click)='Rellenar("usuario",333333)'>
+          <ion-button expand="full" shape="round" (click)='Rellenar("anonimo",4444)'>
             <ion-icon slot="start" name="person"></ion-icon>
-            Usuario
+            Anonimo
           </ion-button>
         </ion-label>
         <ion-label>
-          <ion-button expand="full" (click)='Rellenar("anonimo",444444)'>
+          <ion-button expand="full" shape="round" (click)='Rellenar("tester",5555)'>
             <ion-icon slot="start" name="person"></ion-icon>
-            Anonimo
+            Testeador
           </ion-button>
         </ion-label>
       </ion-item>
