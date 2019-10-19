@@ -11,6 +11,7 @@ export interface Foto {
   tipo: string;
   votos: number;
   fecha: string;
+  votadaPorUsuario: boolean;
 }
 
 export interface Votos {
@@ -90,6 +91,18 @@ export class FotosService {
     }));
   }
 
+  public ObtenerVotos() {
+    return this.firestore.collection('votos').snapshotChanges().pipe(map((votos) => {
+      return votos.map((a) => {
+        return a.payload.doc.data() as Votos;
+      });
+    }));
+  }
+
+  public getCurrentUser(){
+    return this.MiAuth.auth.currentUser.email;
+  }
+
   /** Esta no es de firebase, es un filtrado de fotos */
   public FiltrarFotos(fotos: Array<Foto>, tipo: string): Array<Foto> {
     const auxReturn = new Array<Foto>();
@@ -130,9 +143,15 @@ export class FotosService {
       // console.log('Encontré el voto', votos.users);
 
       const auxUsers: Array<string> = JSON.parse(votos.users);
-      if (this.ValidarUser(user, auxUsers)) {
-        foto.votos++;
-        auxUsers.push(user);
+     
+        if(!foto.votadaPorUsuario){
+          foto.votos++;
+          auxUsers.push(user);
+        }
+        else{
+          foto.votos--;
+          auxUsers.splice(auxUsers.indexOf(user),1);
+        }
         votos.users = JSON.stringify(auxUsers);
 
         // console.log('Voy a setear los votos');
@@ -158,7 +177,7 @@ export class FotosService {
         }).catch(err => {
           console.log('Error en get de los votos', err);
         });
-      }
+      
 
 
 
