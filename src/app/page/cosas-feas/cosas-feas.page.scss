@@ -8,7 +8,7 @@
   width: 100%;
   height: 100%;
   display: relative;
-  background-color: rgb(204, 59, 59);
+  background-color: rgb(124, 6, 51);
   justify-content: center;
 }
 
@@ -17,6 +17,8 @@
   position: absolute;
   top: 60%;
   left: 50%;
+  font-family: cursive;
+  color: white;
   transform: translate(-50%, -50%);
 }
 .fecha {
@@ -24,13 +26,15 @@
   position: absolute;
   top: 73%;
   left: 50%;
+  font-family: cursive;
+  color: white;
   transform: translate(-50%, -50%);
 }
 
 .boton{
   justify-content: center;
   position: absolute;
-  top: 5%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -44,8 +48,8 @@
 .votos{
   justify-content: center;
   position: absolute;
-  top: 5%;
-  left: 60%;
+  top: 10%;
+  left: 70%;
   transform: translate(-50%, -50%);
 }
 
@@ -66,12 +70,12 @@
 .text {
   position: relative;
   text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 40px;
+  font-family:cursive;
+
 }
 
 .cosa {
   width: 100%;
-  height: 10%;
-  background-color: rgb(197, 63, 108);
+  height: 20%;
+  background-color: rgb(124, 6, 51);
 }

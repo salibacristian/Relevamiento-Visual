@@ -5,14 +5,11 @@
 </div>
 
 <ion-slides class="slides">
-  <!-- Foto -->
-
-
   <ion-slide class="slides" *ngFor="let dato of arrayCosasLindas">
     <div class="container">
         <img class="picture" src='{{dato.link}}' style="width:100%;"/>
-        <h1 class="usuario">{{dato.usuario}}</h1>
-        <h1 class="fecha">{{dato.fecha}}</h1>
+        <h4 class="usuario">{{dato.usuario}}</h4>
+        <h5 class="fecha">{{dato.fecha}}</h5>
         <ion-button class="boton" color="danger" (click)="Votar(dato)">
           <ion-icon [ngClass]="{'corazonRojo': dato.votadaPorUsuario}" name="heart"></ion-icon>
         </ion-button>
@@ -20,7 +17,5 @@
           <h1>{{dato.votos}}</h1>
         </ion-text>
     </div>
-
-
   </ion-slide>
 </ion-slides>
