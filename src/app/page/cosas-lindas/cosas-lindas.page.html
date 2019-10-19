@@ -13,6 +13,12 @@
         <img class="picture" src='{{dato.link}}' style="width:100%;"/>
         <h1 class="usuario">{{dato.usuario}}</h1>
         <h1 class="fecha">{{dato.fecha}}</h1>
+        <ion-button class="boton" color="danger" (click)="Votar(dato)">
+          <ion-icon [ngClass]="{'corazonRojo': dato.votadaPorUsuario}" name="heart"></ion-icon>
+        </ion-button>
+        <ion-text class="votos" color="secondary">
+          <h1>{{dato.votos}}</h1>
+        </ion-text>
     </div>
 
 
